@@ -5,8 +5,17 @@ import java.awt.print.Pageable;
 public class Main {
 
     public static void main(String[] args) {
+        Dog dog = new Dog(2, "17", "Violetta");
+        dog.print();
+        Cat cat = new Cat("BULLETPROOF_SUIT", 3, "Jack");
+        cat.print();
+        Cow cow = new Cow(3, "15", "Shastik");
+        cow.print();
+        Printable[] printables = {cat, dog, cow};
 
-
+        createObject("cat").print();
+        createObject("dog").print();
+        createObject("cow").print();
     }
 
     public static Printable createObject(String className) {
@@ -23,5 +32,6 @@ public class Main {
                 break;
         }
         return print;
+
     }
 }
